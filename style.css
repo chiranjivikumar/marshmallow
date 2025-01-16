@@ -1,0 +1,492 @@
+@font-face {
+    font-family: futura;
+    src: url("./Fonts/Futura-Bold.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*::selection{
+    background: transparent;
+    color: red;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+html,body{
+height: 100%;
+width: 100%;
+}
+
+.moveCircle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(253, 158, 148);
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+}
+
+#nav{
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+}
+
+/* Page 1 Starts Here */
+
+#page-1{
+    padding: 10vw 16px;
+    min-height: calc(100vh - 120px);
+    width: 100%;
+    position: relative;
+}
+
+#page-1 h1{
+    font-family: futura;
+    text-transform: uppercase;
+    font-size: 15vw;
+    line-height: 13vw;
+}
+
+#n-left{
+    padding-top: 25px;
+}
+#n-right{
+    padding-top: 30px;
+    display: flex;
+    gap: 80px;
+}
+#n-right>a{
+    font-size: 12px;
+}
+
+#n-left h3{
+    font-size: 2.5vmax;
+    font-family: futura;
+    line-height: 0.9;
+}
+
+#vid-container{
+    height: 100vh;
+    width: 100%;
+    margin-top: 5vw;
+    background-color: grey;
+    position: relative;
+}
+#vid-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#play{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-family: futura;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    opacity: 0;
+    transform: scale(0);
+    user-select: none;
+    cursor: pointer;
+    /* transform: translate(100px,200px); */
+}
+
+
+
+/* Page-2 Starts Here */
+
+#page-2{
+    width: 100%;
+    /* min-height: 100vh; */
+    padding: 0 16px;
+}
+
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+#b-text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+#p2-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+}
+
+.buy-good{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background-color: grey;
+    background-position: top;
+    background-size: cover;
+}
+
+.p2-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    width: 280px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.p2-box p{
+    font-size: 12px;
+    background: transparent;
+}
+
+.p2-box-1{
+    background-color: #c3d8c5;
+}
+.p2-box-2{
+    background-color: #f5dfcf;
+}
+.p2-box-3{
+    background-color: #fff;
+}
+
+.i-1{
+    background-image: url('Image/Rectangle\ 1.png');
+}
+.i-2{
+    background-image: url('Image/Rectangle\ 2.png');
+}
+.i-3{
+    background-image: url('Image/Rectangle\ 3.png');
+}
+
+/* Page 3 Starts Here */
+
+#page-3{
+    width: 100%;
+    height: 80vh;
+}
+
+#p3-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 16px;
+}
+
+
+#p3-l{
+    /* background-color: cadetblue; */
+    width: 70%;
+    padding: 5vw 16px;
+}
+#p3-l h1{
+    font-size: 55px;
+    font-family: futura;
+}
+#p3-r{
+    /* background-color: salmon; */
+    width: 35%;
+    padding: 5vw 0px;
+}
+#p3-r p{
+    width: 70%;
+}
+
+.p3-btn{
+    width: fit-content;
+    font-size: 12px;
+    line-height: 1.4;
+    transition: ease all 0.3s;
+}
+.p3-btn:hover{
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+/* Page-4 Starts Here */
+
+#page-4{
+    width: 100%;
+    padding: 20px 16px;
+}
+
+#shop-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.sp img{
+    width: 35vmax;
+    /* z-index: 1; */
+}
+
+#sr-1,#sr-2{
+    display: flex;
+    gap: 15vw;
+}
+
+.sp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+
+}
+
+.sp p{
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.price{
+    font-size: 12px;
+}
+
+/* Page 5 Container */
+
+#page-5{
+    width: 100%;
+    /* min-height: 100vh; */
+    padding: 0px 16px;
+}
+
+#p5-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vw 0;
+}
+#p5-container h1{
+    font-family: futura;
+    font-size: 5.5vmax;
+    width: 70%;
+    line-height: 1;
+    color: white;
+}
+
+#p5-btn{
+    background-color: #c3d8c5;
+    color: white;
+    padding: 2.5vw 6vw;
+    border-radius: 5vw;
+    margin: 2.5vw 0;
+    cursor: pointer;
+}
+
+#p5-container p{
+    color: white;
+    font-family: gilroy;
+}
+
+/* Page 6 Starts Here */
+#page-6{
+    width: 100%;
+    min-height: 100vh;
+}
+
+#p6-container{
+    display: flex;
+    padding: 30px 35px;
+}
+
+#p6-left{
+    width: 30%;
+    /* min-height: 100vh; */
+    /* background-color: salmon; */
+    padding: 20px 0;
+}
+#p6-left h1{
+    font-family: futura;
+}
+#p6-left p,a{
+    width: 60%;
+    font-family: gilroy;
+}
+#p6-left a{
+    transition: all ease 0.3s;
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+}
+#p6-left a:hover{
+    padding-bottom: 5px;
+}
+
+#p6-right{
+    width: 60%;
+    height: 100%;
+    gap: 20px;
+    display: flex;
+    /* background-color: cadetblue; */
+}
+#p6-right img{
+    width: 55%;
+    object-fit: cover;
+}
+
+/* Page 7 Starts Here */
+
+#page-7{
+    padding: 8vw;
+    width: 100%;
+    min-height: 50vh;
+}
+
+#p7-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#p7-container h5{
+    opacity: 0.6;
+    padding-bottom: 20px;
+}
+
+#p7-mid h1{
+    font-family: futura;
+    line-height: 1;
+    text-align: center;
+}
+
+#p7-right{
+    text-align: right;
+}
+
+.p7m-low{
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    padding: 15px 0;
+    opacity: 0.6;
+}
+
+#p7-text{
+    text-align: center;
+    opacity: 0.7;
+    padding: 10vw 0;
+    font-size: 1.2vmax;
+}
+
+@media (width<=1024px){
+    #n-right>a{
+        display: none;
+    }
+    #n-right{
+        gap: 20px;
+    }
+    #page-1 h1{
+        text-transform: uppercase;
+        font-size: 20vw;
+        line-height: 18vw;
+    }
+    #vid-container{
+        height: 40vh;
+        width: 100%;
+        margin-top: 5vw;
+    }
+
+
+    .buy-good{
+        width: 90vw;
+        height: 150vmin;
+    }
+    #p2-container{
+        flex-direction: column;
+    }
+    #p3-container{
+       flex-direction: column;
+    }
+    #p3-l{
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+    }
+    #p3-l h1{
+        font-size: 30px;
+    }
+
+    #p3-r{
+        /* background-color: salmon; */
+        width: 100%;
+        padding: 0vw;
+        text-align: center;
+    }
+    #p3-r p{
+        width: 100%;
+    }
+
+    .sp img{
+        width: 20vmax;
+
+    }
+
+    #p5-container h1{
+        font-family: futura;
+        font-size: 2.5vmax;
+        width: 70%;
+    }
+    #p6-container{
+        flex-direction: column-reverse;
+    }
+    #p6-left{
+        width: 100%;
+    }
+    #p6-right{
+        width: 90%;
+    }
+    #p6-left p,a{
+        width: 100%;
+    }
+
+    #p7-mid{
+        display: none;
+    }
+}
+
+@media (500px<=width<=1000px){
+    .sp img{
+        width: 25vmax;
+        height: 25vmax;
+    }
+    /* #p5-container h1{
+        font-family: futura;
+        font-size: 4vmax;
+        width: 70%;
+    } */
+}
